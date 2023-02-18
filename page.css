@@ -1,0 +1,73 @@
+#start, #features, #installation {
+          background: #212933;
+          color: #99a3a9;
+          padding: 10% 5%;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+}
+ul {
+          margin-left: 1rem;
+}
+
+#start {
+          min-height: 90vh;
+          flex-direction: row;
+          gap: 4rem;
+}
+#start .left {
+          max-width: 60%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1.2rem;
+}
+#start .right {
+          width: 100%;
+          background: url('ai-knows.png');
+          background-size: cover;
+          background-position: center center;
+}
+#start h1 {
+          font-size: clamp(12px, 10vw, 48px);
+          line-height: 1.2em;
+          color: #B6BABC;
+          margin-bottom: 1rem;
+}
+#start p {
+          font-size: 12px;
+          font-weight: 200;
+}
+#start p span {
+          font-size: 16px;
+          font-weight: 800;
+          display: block;
+          margin-bottom: 0.4rem;
+}
+h2 {
+          font-size: clamp(12px, 10vw, 24px);
+}
+
+#features {
+          color: #666c73;
+          background: #bed0cb;
+}
+
+#installation {
+          color: #99a3a9;
+          background: #3c4f5e;
+}
+
+#disclaimer {
+          padding: .6rem;
+          display: grid;
+          place-items: center;
+          color: #565e67;
+          background: #828c95;
+}
+
+@media screen and (max-width: 768px) {
+          #start .right {
+                    display: none;
+          }
+}

@@ -1,0 +1,24 @@
+* {
+          padding: 0;
+          margin: 0;
+          font-family: Arial, sans-serif;
+          box-sizing: border-box;
+}
+
+:root {
+          --blue: #212933;
+          --white: #e0e7ec;
+          --gray: #99a3a9;
+          --grayLight:  #B6BABC;
+          --green: #3c4f5e;
+          --greenLight: #bed0cb;
+}
+
+::selection {
+          background: #99a3a9;
+          color: #212933;
+}
+
+a {
+          text-decoration: none;
+}
