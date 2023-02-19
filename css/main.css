@@ -1,8 +1,8 @@
 * {
           padding: 0;
           margin: 0;
-          font-family: Arial, sans-serif;
           box-sizing: border-box;
+          font-family: 'Arial', sans-serif;
 }
 
 :root {
@@ -20,5 +20,14 @@
 }
 
 a {
+          color: var(--white);
           text-decoration: none;
+}
+
+button {
+          border-radius: 10px;
+          padding: .4em;
+          border: none;
+          color: var(--green);
+          background-color: var(--greenLight);
 }

@@ -53,9 +53,35 @@
                     height: 100px;
           }
           #sadtoseeyougo p {
+                    font-size: 1.2rem;
                     font-family: sans-serif;
                     text-align: center;
                     font-weight: 100;
+          }
+          #sadtoseeyougo a {
+                    text-decoration: underline;
+          }
+          #sadtoseeyougo button {
+                    cursor: pointer;
+                    margin-top: 1.2rem;
+                    font-size: 1.2rem;
+                    animation: jumpShake 1s ease-in-out infinite;
+          }
+
+          thead td {
+                    font-weight: bold;
+          }
+
+          @keyframes jumpShake {
+          0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+          }
+          40% {
+          transform: translateY(-10px) rotate(-5deg);
+          }
+          60% {
+          transform: translateY(-10px) rotate(5deg);
+          }
           }
 </style>
 
@@ -65,14 +91,15 @@
                     <img src="sad.gif" alt="sad gif">
                     <p>
                               This extension is made with love 💙<br>
-                              <b>You don't liked it?</b> <a>Give us feedback</a>, we reply in 24h and work asap on it! 🚀
+                              <b>You don't liked it?</b> <a href="https://forms.gle/8rb1of68kC1WU2MZ8/" target="_blank">Give us feedback</a>, we reply in 24h and work asap on it! 🚀
                     </p>
+                    <a href="https://chrome.google.com/webstore/detail/chat-gpt-optimizer/fmnbpdmndaabkihejhgdpdpjihokbhlb/"><button>Reinstall Extension</button></a>
           </section>
           <table>
                     <thead>
                               <tr>
-                                        <td>What You Loose</td>
-                                        <td>What You Get</td>
+                                        <td>What You Lost</td>
+                                        <td>What You Got</td>
                               </tr>
                     </thead>
                     <tbody>
