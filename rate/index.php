@@ -1,2 +1,2 @@
 <?php
-header('Location: for/chrome/rate/');
+header('Location: ../for/chrome/rate/');

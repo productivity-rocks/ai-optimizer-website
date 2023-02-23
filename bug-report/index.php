@@ -1,2 +1,2 @@
 <?php
-header('Location: for/chrome/bug-report/');
+header('Location: ../for/chrome/bug-report/');
