@@ -11,6 +11,18 @@
 </head>
 
 <body>
+        <header>
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const redirectNotification = urlParams.get('redirectNotification');
+                if(redirectNotification) {
+                    document.querySelector('header').innerText = redirectNotification;
+                } else {
+                    document.querySelector('header').style.display = 'none';
+                }
+                console.log(redirectNotification);
+            </script>
+        </header>
           <main>
                     <section id="start">
                               <div class="left">

@@ -4,7 +4,7 @@ function isMobileDevice() {
 }
 
 if(isMobileDevice()){
-          header('Location: ../../../');
+          header('Location: ../../../?redirectNotification=rating%20only%20on%20desktop');
 } else {
           header('Location: https://chrome.google.com/webstore/detail/chatgpt-optimizer-superch/fmnbpdmndaabkihejhgdpdpjihokbhlb/reviews/');
 }

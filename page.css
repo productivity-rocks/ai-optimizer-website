@@ -1,3 +1,16 @@
+:root {
+          --warn: #f39c12;
+          --error: #e74c3c;
+}
+
+header {
+          padding: .2rem .4rem;
+          display: grid;
+          place-items: center;
+          color: #1e1e1e;
+          background: #f39c12;
+}
+
 #start, #features, #installation {
           background: #212933;
           color: #99a3a9;
