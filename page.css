@@ -11,7 +11,7 @@ header {
           background: #f39c12;
 }
 
-#start, #features, #installation {
+#start, #features, #installation, #upcoming {
           background: #212933;
           color: #99a3a9;
           padding: 10% 5%;
@@ -24,22 +24,33 @@ ul {
 }
 
 #start {
+          height: fit-content;
           min-height: 90vh;
+          display: flex;
           flex-direction: row;
+          align-items: center;
           gap: 4rem;
 }
 #start .left {
-          max-width: 60%;
+          max-width: 55%;
           display: flex;
           flex-direction: column;
           justify-content: center;
           gap: 1.2rem;
 }
 #start .right {
+          display: grid;
+          place-items: center;
           width: 100%;
-          background: url('ai-knows.png');
-          background-size: cover;
-          background-position: center center;
+          height: fit-content;
+}
+#start .right img {
+          border-radius: 15px;
+          width: 100%;
+          min-height: 300px;
+          height: 45vh;
+          object-fit: cover;
+          object-position: center center;
 }
 #start h1 {
           font-size: clamp(12px, 10vw, 48px);
@@ -62,8 +73,42 @@ h2 {
 }
 
 #features {
+          padding: 5%;
           color: #666c73;
           background: #bed0cb;
+}
+#features h2 {
+          font-size: 28px;
+          margin: auto;
+          margin-bottom: 2rem;
+}
+#features .cards {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          justify-content: space-between;
+          align-items: center;
+}
+#features .card {
+          border-radius: 10px;
+          color: #bed0cb;
+          background: #212933;
+          overflow: hidden;
+          max-width: 400px;
+}
+#features .card img {
+          width: 100%;
+          aspect-ratio: 8 / 5;
+          object-fit: cover;
+}
+#features .card .text {
+          padding: .8rem;
+          display: flex;
+          flex-direction: column;
+          gap: .4rem;
+}
+#features .card .text h4 {
+          color: #fefef2;
 }
 
 #installation {
