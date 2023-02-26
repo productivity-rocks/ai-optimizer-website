@@ -30,4 +30,89 @@ button {
           border: none;
           color: var(--green);
           background-color: var(--greenLight);
+
+code {
+          font-family: monospace;
+          color: var(--grayLight);
+          background: var(--blue);
+}
+
+/* details (for faq) */
+.detailsGroup {
+          width: 100%;
+          max-width: 640px;
+          margin: auto;
+          border: 1px solid #cfd8dc;
+          border-radius: 5px;
+          color: #99A3A8;
+          background-color: var(--green);
+}
+
+.detailsGroup .details {
+          overflow: hidden;
+          border-bottom: 1px solid #cfd8dc;
+          transition: height 300ms ease-in-out;
+}
+
+.detailsGroup .details:last-child {
+          border-bottom: 0;
+}
+
+.detailsGroup summary,
+.detailsGroup .detailsContent {
+          padding: 24px;
+}
+
+.detailsGroup summary {
+          position: relative;
+          list-style: none;
+          padding-left: 48px;
+          outline: 0;
+          cursor: pointer;
+          font-weight: 600;
+          transition: color 300ms ease-in-out;
+}
+
+.detailsGroup [open]>summary {
+          color: #fff;
+}
+
+.detailsGroup summary::-webkit-details-marker {
+          display: none;
+}
+
+.detailsGroup summary:before,
+.detailsGroup summary:after {
+          content: "";
+          position: absolute;
+}
+
+.detailsGroup summary:before {
+          left: 20px;
+          top: 50%;
+          height: 2px;
+          margin-top: -1px;
+          width: 16px;
+          background: #fff;
+}
+
+.detailsGroup summary:after {
+          left: 28px;
+          top: 50%;
+          height: 16px;
+          margin-top: -8px;
+          width: 2px;
+          margin-left: -1px;
+          background: #fff;
+          transition: all 300ms ease-in-out;
+}
+
+.detailsGroup [open] summary:after {
+          opacity: 0;
+          transform: translateY(25%);
+}
+
+.detailsGroup .detailsContent {
+          padding-top: 0;
+          padding-left: 48px;
 }
