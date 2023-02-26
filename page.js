@@ -1,8 +1,8 @@
 window.addEventListener('load', ()=>{
 
+          // improve all detail fields
           (() => {
                     const els = document.querySelectorAll(".detailsGroup");
-
                     for (let i = 0; i < els.length; i++) {
                               const details = new Details(els[i], {
                                         speed: 500,
@@ -11,6 +11,7 @@ window.addEventListener('load', ()=>{
                     }
           })();
 
+          // add following install button to #install section
           const secInstallation = document.querySelector('#installation');
           secInstallation.onclick = ()=>{
                     window.open('/for/chrome/');
@@ -22,7 +23,7 @@ window.addEventListener('load', ()=>{
                     el.style.pointerEvents = 'none';
           });
           const redBox = Object.assign(document.createElement('button'), {
-                    innerText: 'download',
+                    innerText: 'install',
                     style: `
                     font-size: 1.2rem;
                     position: fixed;
@@ -45,6 +46,8 @@ window.addEventListener('load', ()=>{
                     var top = e.clientY;
                     redBox.style.top = top+'px';
                     redBox.style.left = left+'px';
+          });
+
           const contactForm = document.querySelector('#contactForm');
 
           contactForm.onsubmit = ()=>{
