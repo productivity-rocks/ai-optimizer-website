@@ -151,11 +151,13 @@
             <div class="right">
                 <form action="javascript:" id="contactForm" required>
                     <input type="email" name="mail" placeholder="Mail" required>
-                    <select name="type">
-                        <option value="contact">Contact</option>
-                        <option value="featureRequest">Feature Request</option>
-                        <option value="bugReport">Bug Report</option>
-                    </select>
+                    <div class="selectWrap">
+                        <select name="type">
+                            <option value="contact">Contact</option>
+                            <option value="featureRequest">Feature Request</option>
+                            <option value="bugReport">Bug Report</option>
+                        </select>
+                    </div>
                     <textarea name="message" cols="30" rows="8" placeholder="Message" required></textarea>
                     <button>Send</button>
                 </form>

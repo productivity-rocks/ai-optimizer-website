@@ -1,5 +1,13 @@
 window.addEventListener('load', ()=>{
 
+  document.querySelectorAll('.selectWrap').forEach(selectWrap => {
+    const select = selectWrap.querySelector('select');
+    select && (select.onfocusin = () => selectWrap.setAttribute('focus', 'true'));
+    select && (select.onfocusout = () => selectWrap.setAttribute('focus', 'false'));
+    select && (select.onchange = () => select.blur());
+    select && (select.onmouseout = () => select.blur());
+  });
+
           // improve all detail fields
           (() => {
                     const els = document.querySelectorAll(".detailsGroup");

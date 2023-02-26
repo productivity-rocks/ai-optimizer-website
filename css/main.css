@@ -49,12 +49,13 @@ textarea,
 button {
           font-size: 1rem;
           border-radius: 10px;
-          padding: .6em;
+          padding: .8rem .6em;
           border: none;
           color: var(--green);
           background-color: var(--greenLight);
           outline: none;
           resize: none;
+          -webkit-appearance: none;
 }
 button {
           color: var(--greenLight);
@@ -64,15 +65,34 @@ button {
 input,
 select,
 textarea {
-          padding: .4em .6rem;
+          color: #0f0f0f;
           border: 3px solid var(--gray);
 }
 input::placeholder,
 select::placeholder,
 textarea::placeholder {
-          font: 1rem;
-          letter-spacing: .05em;
+          font-size: 1rem;
           color: #596e7e;
+}
+.selectWrap {
+          position: relative;
+          z-index: 1;
+          content: '';
+          display: block;
+}
+.selectWrap::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: .6rem;
+          transform: rotate(0deg) translateY(-50%);
+          border-right: 6px solid transparent;
+          border-bottom: 6px solid var(--gray);
+          border-left: 6px solid transparent;
+          transition: .2s ease-in-out;
+}
+.selectWrap[focus="true"]:before {
+          transform: rotate(180deg) translateY(0%);
 }
 
 code {
