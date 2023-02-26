@@ -1,170 +1,194 @@
 header {
-          padding: .2rem .4rem;
-          display: grid;
-          place-items: center;
-          color: #1e1e1e;
-          background: #f39c12;
+    padding: .2rem .4rem;
+    display: grid;
+    place-items: center;
+    color: #1e1e1e;
+    background: #f39c12;
 }
 
-#start, #features, #installation, #upcoming {
-          background: #212933;
-          color: #99a3a9;
-          padding: 10% 5%;
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          z-index: 2;
-          position: relative;
+#start,
+#features,
+#installation,
+#upcoming {
+    background: #212933;
+    color: #99a3a9;
+    padding: 10% 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 2;
+    position: relative;
 }
+
 ul {
-          margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 #start {
-          height: fit-content;
-          min-height: 90vh;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 4rem;
+    height: fit-content;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
 }
+
 #start .left {
-          max-width: 55%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 1.2rem;
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
 }
+
 #start .right {
-          display: grid;
-          place-items: center;
-          width: 100%;
-          height: fit-content;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: fit-content;
 }
+
 #start .right img {
-          border-radius: 15px;
-          width: 100%;
-          min-height: 300px;
-          height: 45vh;
-          object-fit: cover;
-          object-position: center center;
+    border-radius: 15px;
+    width: 100%;
+    min-height: 300px;
+    height: 45vh;
+    object-fit: cover;
+    object-position: center center;
 }
+
 #start h1 {
-          font-size: clamp(12px, 10vw, 48px);
-          line-height: 1.2em;
-          color: #B6BABC;
-          margin-bottom: 1rem;
+    font-size: clamp(12px, 10vw, 48px);
+    line-height: 1.2em;
+    color: #B6BABC;
+    margin-bottom: 1rem;
 }
+
 #start p {
-          font-size: 12px;
-          font-weight: 200;
+    font-size: 12px;
+    font-weight: 200;
 }
+
 #start p span {
-          font-size: 16px;
-          font-weight: 800;
-          display: block;
-          margin-bottom: 0.4rem;
+    font-size: 16px;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 0.4rem;
 }
+
 h2 {
-          font-size: clamp(12px, 10vw, 24px);
+    font-size: clamp(12px, 10vw, 24px);
 }
 
 #features {
-          padding: 5%;
-          color: #666c73;
-          background: #bed0cb;
+    padding: 5%;
+    color: #666c73;
+    background: #bed0cb;
 }
+
 #features h2 {
-          font-size: 28px;
-          margin: auto;
-          margin-bottom: 2rem;
+    font-size: 28px;
+    margin: auto;
+    margin-bottom: 2rem;
 }
+
 #features .cards {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1rem;
-          justify-content: space-between;
-          align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
 }
+
 #features .card {
-          border-radius: 10px;
-          color: #bed0cb;
-          background: #212933;
-          overflow: hidden;
-          max-width: 400px;
+    border-radius: 10px;
+    color: #bed0cb;
+    background: #212933;
+    overflow: hidden;
+    max-width: 400px;
 }
+
 #features .card img {
-          width: 100%;
-          aspect-ratio: 8 / 5;
-          object-fit: cover;
+    width: 100%;
+    aspect-ratio: 8 / 5;
+    object-fit: cover;
 }
+
 #features .card .text {
-          padding: .8rem;
-          display: flex;
-          flex-direction: column;
-          gap: .4rem;
+    padding: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
 }
+
 #features .card .text h4 {
-          color: #fefef2;
+    color: #fefef2;
 }
 
 #installation {
-          color: #99a3a9;
-          background: #3c4f5e;
+    color: #99a3a9;
+    background: #3c4f5e;
 }
 
 #upcoming {
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-around;
-          flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
+
 #upcoming ul li {
-          margin-top: .8rem;
+    margin-top: .8rem;
 }
+
 #upcoming ul li p {
-          margin-top: .4rem;
+    margin-top: .4rem;
 }
+
 #upcoming .right {
-          width: 100%;
-          max-width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
+
 #upcoming .right form {
-          display: flex;
-          flex-direction: column;
-          gap: .4rem;
-          width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    width: 100%;
 }
+
 #upcoming .right form * {
-          width: 100%;
+    width: 100%;
 }
 
 #outro {
-          padding-bottom: 2rem;
-          display: grid;
-          place-items: center;
+    padding-bottom: 2rem;
+    display: grid;
+    place-items: center;
 }
+
 #outro h3 {
-          margin-top: 2.6rem;
-          font-size: 1.8rem;
-          color: var(--greenLight);
+    margin-top: 2.6rem;
+    font-size: 1.8rem;
+    color: var(--greenLight);
 }
+
 #outro .detailsGroup {
-          margin-top: 1.6rem;
-          max-width: 800px;
+    margin-top: 1.6rem;
+    max-width: 800px;
 }
 
 #disclaimer {
-          font-size: .8rem;
-          padding: .6rem;
-          display: grid;
-          place-items: center;
-          color: #565e67;
-          background: #828c95;
+    font-size: .8rem;
+    padding: .6rem;
+    display: grid;
+    place-items: center;
+    color: #565e67;
+    background: #828c95;
 }
 
 @media screen and (max-width: 768px) {
-          #start .right {
-                    display: none;
-          }
+    #start .right {
+        display: none;
+    }
 }

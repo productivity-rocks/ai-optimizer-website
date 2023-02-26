@@ -1,127 +1,127 @@
-window.addEventListener('load', ()=>{
-
-  document.querySelectorAll('.selectWrap').forEach(selectWrap => {
-    const select = selectWrap.querySelector('select');
-    select && (select.onfocusin = () => selectWrap.setAttribute('focus', 'true'));
-    select && (select.onfocusout = () => selectWrap.setAttribute('focus', 'false'));
+window.addEventListener("load", () => {
+  document.querySelectorAll(".selectWrap").forEach((selectWrap) => {
+    const select = selectWrap.querySelector("select");
+    select &&
+      (select.onfocusin = () => selectWrap.setAttribute("focus", "true"));
+    select &&
+      (select.onfocusout = () => selectWrap.setAttribute("focus", "false"));
     select && (select.onchange = () => select.blur());
     select && (select.onmouseout = () => select.blur());
   });
 
-          // improve all detail fields
-          (() => {
-                    const els = document.querySelectorAll(".detailsGroup");
-                    for (let i = 0; i < els.length; i++) {
-                              const details = new Details(els[i], {
-                                        speed: 500,
-                                        one_visible: true,
-                              });
-                    }
-          })();
+  // improve all detail fields
+  (() => {
+    const els = document.querySelectorAll(".detailsGroup");
+    for (let i = 0; i < els.length; i++) {
+      const details = new Details(els[i], {
+        speed: 500,
+        one_visible: true,
+      });
+    }
+  })();
 
-          // add following install button to #install section
-          const secInstallation = document.querySelector('#installation');
-          secInstallation.onclick = ()=>{
-                    window.open('/for/chrome/');
-          }
-          secInstallation.style.zIndex = '1';
-          secInstallation.style.cursor = 'pointer';
-          secInstallation.querySelectorAll('*').forEach((el)=>{
-                    el.style.zIndex = '2';
-                    el.style.pointerEvents = 'none';
-          });
-          const redBox = Object.assign(document.createElement('button'), {
-                    innerText: 'install',
-                    style: `
+  // add following install button to #install section
+  const secInstallation = document.querySelector("#installation");
+  secInstallation.onclick = () => {
+    window.open("/for/chrome/");
+  };
+  secInstallation.style.zIndex = "1";
+  secInstallation.style.cursor = "pointer";
+  secInstallation.querySelectorAll("*").forEach((el) => {
+    el.style.zIndex = "2";
+    el.style.pointerEvents = "none";
+  });
+  const redBox = Object.assign(document.createElement("button"), {
+    innerText: "install",
+    style: `
                     font-size: 1.2rem;
                     position: fixed;
                     transform: translate(-50%, -50%);
                     pointer-events: none;
                     background: var(--greenLight);
                     color: var(--blue);
-                    `
-          });
-          secInstallation.appendChild(redBox);
-          secInstallation.addEventListener('mouseenter', ()=>{
-                    redBox.style.display = 'block';
-          });
-          secInstallation.addEventListener('mouseleave', ()=>{
-                    console.log('fired');
-                    redBox.style.display = 'none';
-          });
-          secInstallation.addEventListener('mousemove', (e)=>{
-                    var left = e.clientX;
-                    var top = e.clientY;
-                    redBox.style.top = top+'px';
-                    redBox.style.left = left+'px';
-          });
+                    `,
+  });
+  secInstallation.appendChild(redBox);
+  secInstallation.addEventListener("mouseenter", () => {
+    redBox.style.display = "block";
+  });
+  secInstallation.addEventListener("mouseleave", () => {
+    console.log("fired");
+    redBox.style.display = "none";
+  });
+  secInstallation.addEventListener("mousemove", (e) => {
+    var left = e.clientX;
+    var top = e.clientY;
+    redBox.style.top = top + "px";
+    redBox.style.left = left + "px";
+  });
 
-          const contactForm = document.querySelector('#contactForm');
+  const contactForm = document.querySelector("#contactForm");
 
-          contactForm.onsubmit = ()=>{
+  contactForm.onsubmit = () => {
+    const valueMail = contactForm.querySelector('[name="mail"]').value;
+    const valueType = contactForm.querySelector('[name="type"]').value;
+    const valueMessage = contactForm.querySelector('[name="message"]').value;
 
-                    const valueMail = contactForm.querySelector('[name="mail"]').value;
-                    const valueType = contactForm.querySelector('[name="type"]').value;
-                    const valueMessage = contactForm.querySelector('[name="message"]').value;
+    if (!valueMail || !valueType || !valueMessage) {
+      toast("Fill all fields!");
+      return;
+    }
 
-                    if(!valueMail || !valueType || !valueMessage) {
-                              toast('Fill all fields!');
-                              return;
-                    }
-          
-                    // Set Data as JSON
-                    const data = {
-                              "mail": valueMail,
-                              "type": valueType,
-                              "message": valueMessage,
-                    };
+    // Set Data as JSON
+    const data = {
+      mail: valueMail,
+      type: valueType,
+      message: valueMessage,
+    };
 
-                    // Create XHR Request
-                    var xhr = new XMLHttpRequest();
+    // Create XHR Request
+    var xhr = new XMLHttpRequest();
 
-                    // Setup XHR Request
-                    var xhrURL = "https://productivity.rocks/tool/ai-optimizer/api/contact/";
-                    xhr.open("POST", xhrURL, true);
-                    xhr.setRequestHeader('Content-Type', 'application/json');
-                    xhr.setRequestHeader("Accept", "application/json");
+    // Setup XHR Request
+    var xhrURL = "https://productivity.rocks/tool/ai-optimizer/api/contact/";
+    xhr.open("POST", xhrURL, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Accept", "application/json");
 
-                    // On XHR Request Change
-                    xhr.onreadystatechange = function () {
-                              // On XHR Ready
-                              if (xhr.readyState === 4) {
-                                        try {
-                                                  // response
-                                                  var response = JSON.parse(xhr.responseText);
-                                                  if(response['error']) {
-                                                            // not send
-                                                            toast('not send', {type: 'Error: Try again!'});
-                                                  } else if(!response['error']) {
-                                                            // send
-                                                            toast('Sent: We\'ll answer asap!');
-                                                            contactForm.reset();
-                                                  } else {
-                                                            throw new Error(`No information from server!`);
-                                                  }
-                                        } catch (error) {
-                                                  console.log(error);
-                                                  toast('Server Error: We\' fix it!', {type: 'error'});
-                                        }
-                              }
-                    };
-                    // Send XHR Request
-                    xhr.send(JSON.stringify(data));
+    // On XHR Request Change
+    xhr.onreadystatechange = function () {
+      // On XHR Ready
+      if (xhr.readyState === 4) {
+        try {
+          // response
+          var response = JSON.parse(xhr.responseText);
+          if (response["error"]) {
+            // not send
+            toast("not send", { type: "Error: Try again!" });
+          } else if (!response["error"]) {
+            // send
+            toast("Sent: We'll answer asap!");
+            contactForm.reset();
+          } else {
+            throw new Error(`No information from server!`);
           }
+        } catch (error) {
+          console.log(error);
+          toast("Server Error: We' fix it!", { type: "error" });
+        }
+      }
+    };
+    // Send XHR Request
+    xhr.send(JSON.stringify(data));
+  };
 });
 
 function toast(msg, data = {}) {
-          let typeColor = 'var(--hGreen), var(--sGreen), var(--lGreen)';
-          if(data.type && data.type === 'warn') {
-                    typeColor = 'var(--hWarn), var(--sWarn), var(--lWarn)';
-          } else if(data.type === 'error') {
-                    typeColor = 'var(--hError), var(--sError), var(--lError)';
-          }
+  let typeColor = "var(--hGreen), var(--sGreen), var(--lGreen)";
+  if (data.type && data.type === "warn") {
+    typeColor = "var(--hWarn), var(--sWarn), var(--lWarn)";
+  } else if (data.type === "error") {
+    typeColor = "var(--hError), var(--sError), var(--lError)";
+  }
 
-          var style = `
+  var style = `
           bottom: -315px; right: 15px;
           transition: .8s  cubic-bezier(0.25, 0.46, 0.45, 0.94);
           cursor: pointer;
@@ -137,135 +137,136 @@ function toast(msg, data = {}) {
           border: 1px solid hsl(${typeColor});
           background: var(--blue);
           `;
-          if (document.getElementById('toast')) {
-                    document.getElementById('toast').remove();
-          }
-          var toast = Object.assign(document.createElement('div'), {
-                    id: 'toast',
-                    style: style,
-                    innerText: msg,
-                    onclick: () => {
-                              if(data['callback']) {data['callback']()};
-                              document.getElementById('toast').remove();
-                    }
-          });
-          document.body.appendChild(toast);
-          setTimeout(() => {
-                    toast.style.bottom = '20px';
-                    setTimeout(() => {
-                              toast.style.bottom = '-315px';
-                              setTimeout(() => {
-                                        toast.parentNode.removeChild(toast);
-                              }, 1000)
-                    }, 2000)
-          }, 100);
+  if (document.getElementById("toast")) {
+    document.getElementById("toast").remove();
+  }
+  var toast = Object.assign(document.createElement("div"), {
+    id: "toast",
+    style: style,
+    innerText: msg,
+    onclick: () => {
+      if (data["callback"]) {
+        data["callback"]();
+      }
+      document.getElementById("toast").remove();
+    },
+  });
+  document.body.appendChild(toast);
+  setTimeout(() => {
+    toast.style.bottom = "20px";
+    setTimeout(() => {
+      toast.style.bottom = "-315px";
+      setTimeout(() => {
+        toast.parentNode.removeChild(toast);
+      }, 1000);
+    }, 2000);
+  }, 100);
 }
 
 // details (for faq)
 class Details {
-          constructor(el, settings) {
-                    this.group = el;
-                    this.details = this.group.querySelectorAll("details");
-                    this.toggles = this.group.querySelectorAll("summary");
-                    this.contents = this.group.querySelectorAll(".detailsContent");
+  constructor(el, settings) {
+    this.group = el;
+    this.details = this.group.querySelectorAll("details");
+    this.toggles = this.group.querySelectorAll("summary");
+    this.contents = this.group.querySelectorAll(".detailsContent");
 
-                    // Set default settings if necessary
-                    this.settings = Object.assign(
-                              {
-                                        speed: 300,
-                                        one_visible: false,
-                              },
-                              settings
-                    );
+    // Set default settings if necessary
+    this.settings = Object.assign(
+      {
+        speed: 300,
+        one_visible: false,
+      },
+      settings
+    );
 
-                    // Setup inital positions
-                    for (let i = 0; i < this.details.length; i++) {
-                              const detail = this.details[i];
-                              const toggle = this.toggles[i];
-                              const content = this.contents[i];
+    // Setup inital positions
+    for (let i = 0; i < this.details.length; i++) {
+      const detail = this.details[i];
+      const toggle = this.toggles[i];
+      const content = this.contents[i];
 
-                              // Set transition-duration to match JS setting
-                              detail.style.transitionDuration = this.settings.speed + "ms";
+      // Set transition-duration to match JS setting
+      detail.style.transitionDuration = this.settings.speed + "ms";
 
-                              // Set initial height to transition from
-                              if (!detail.hasAttribute("open")) {
-                                        detail.style.height = toggle.clientHeight + "px";
-                              } else {
-                                        detail.style.height =
-                                                  toggle.clientHeight + content.clientHeight + "px";
-                              }
-                    }
+      // Set initial height to transition from
+      if (!detail.hasAttribute("open")) {
+        detail.style.height = toggle.clientHeight + "px";
+      } else {
+        detail.style.height = toggle.clientHeight + content.clientHeight + "px";
+      }
+    }
 
-                    // Setup click handler
-                    this.group.addEventListener("click", (e) => {
-                              if (e.target.tagName === "SUMMARY") {
-                                        e.preventDefault();
+    // Setup click handler
+    this.group.addEventListener("click", (e) => {
+      if (e.target.tagName === "SUMMARY") {
+        e.preventDefault();
 
-                                        let num = 0;
-                                        for (let i = 0; i < this.toggles.length; i++) {
-                                                  if (this.toggles[i] === e.target) {
-                                                            num = i;
-                                                            break;
-                                                  }
-                                        }
-
-                                        if (!e.target.parentNode.hasAttribute("open")) {
-                                                  this.open(num);
-                                        } else {
-                                                  this.close(num);
-                                        }
-                              }
-                    });
+        let num = 0;
+        for (let i = 0; i < this.toggles.length; i++) {
+          if (this.toggles[i] === e.target) {
+            num = i;
+            break;
           }
+        }
 
-          open(i) {
-                    const detail = this.details[i];
-                    const toggle = this.toggles[i];
-                    const content = this.contents[i];
+        if (!e.target.parentNode.hasAttribute("open")) {
+          this.open(num);
+        } else {
+          this.close(num);
+        }
+      }
+    });
+  }
 
-                    // If applicable, hide all the other details first
-                    if (this.settings.one_visible) {
-                              for (let a = 0; a < this.toggles.length; a++) {
-                                        if (i !== a) this.close(a);
-                              }
-                    }
+  open(i) {
+    const detail = this.details[i];
+    const toggle = this.toggles[i];
+    const content = this.contents[i];
 
-                    // Update class
-                    detail.classList.remove("is-closing");
+    // If applicable, hide all the other details first
+    if (this.settings.one_visible) {
+      for (let a = 0; a < this.toggles.length; a++) {
+        if (i !== a) this.close(a);
+      }
+    }
 
-                    // Get height of toggle
-                    const toggle_height = toggle.clientHeight;
+    // Update class
+    detail.classList.remove("is-closing");
 
-                    // Momentarily show the contents just to get the height
-                    detail.setAttribute("open", true);
-                    const content_height = content.clientHeight;
-                    detail.removeAttribute("open");
+    // Get height of toggle
+    const toggle_height = toggle.clientHeight;
 
-                    // Set the correct height and let CSS transition it
-                    detail.style.height = toggle_height + content_height + "px";
+    // Momentarily show the contents just to get the height
+    detail.setAttribute("open", true);
+    const content_height = content.clientHeight;
+    detail.removeAttribute("open");
 
-                    // Finally set the open attr
-                    detail.setAttribute("open", true);
-          }
+    // Set the correct height and let CSS transition it
+    detail.style.height = toggle_height + content_height + "px";
 
-          close(i) {
-                    const detail = this.details[i];
-                    const toggle = this.toggles[i];
+    // Finally set the open attr
+    detail.setAttribute("open", true);
+  }
 
-                    // Update class
-                    detail.classList.add("is-closing");
+  close(i) {
+    const detail = this.details[i];
+    const toggle = this.toggles[i];
 
-                    // Get height of toggle
-                    const toggle_height = toggle.clientHeight;
+    // Update class
+    detail.classList.add("is-closing");
 
-                    // Set the height so only the toggle is visible
-                    detail.style.height = toggle_height + "px";
+    // Get height of toggle
+    const toggle_height = toggle.clientHeight;
 
-                    setTimeout(() => {
-                              // Check if still closing
-                              if (detail.classList.contains("is-closing"))
-                                        detail.removeAttribute("open");
-                              detail.classList.remove("is-closing");
-                    }, this.settings.speed);
-          }
+    // Set the height so only the toggle is visible
+    detail.style.height = toggle_height + "px";
+
+    setTimeout(() => {
+      // Check if still closing
+      if (detail.classList.contains("is-closing"))
+        detail.removeAttribute("open");
+      detail.classList.remove("is-closing");
+    }, this.settings.speed);
+  }
 }
