@@ -31,13 +31,8 @@
                 <h1>The ChatGPT<br>Optimizing Extension</h1>
                 <p>
                     <span>
-                        Tired of using ChatGPT limited features? Say hello to the ultimate productivity booster,
-                        designed specifically to improve
-                        your workflow and enhance your ChatGPT experience.
+                        Supercharge Your ChatGPT Experience with Our Powerful Extension & Unlock the Full Potential of ChatGPT with Features Designed to Boost Your Productivity
                     </span>
-                    With its user-friendly interface and powerful features, the ChatGPT Optimizer is the perfect tool
-                    for
-                    anyone who wants to get the most out of ChatGPT.
                 </p>
                 <div style="display: flex; gap: .6rem; align-items: center; flex-wrap: wrap;">
                     <a href="https://productivity.rocks/tool/ai-optimizer/for/chrome/" target="_blank"
