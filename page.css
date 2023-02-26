@@ -1,8 +1,3 @@
-:root {
-          --warn: #f39c12;
-          --error: #e74c3c;
-}
-
 header {
           padding: .2rem .4rem;
           display: grid;
@@ -133,6 +128,7 @@ h2 {
 }
 
 #disclaimer {
+          font-size: .8rem;
           padding: .6rem;
           display: grid;
           place-items: center;
