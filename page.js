@@ -1,8 +1,8 @@
 window.addEventListener('load', ()=>{
 
+          // improve all detail fields
           (() => {
                     const els = document.querySelectorAll(".detailsGroup");
-
                     for (let i = 0; i < els.length; i++) {
                               const details = new Details(els[i], {
                                         speed: 500,
@@ -11,40 +11,45 @@ window.addEventListener('load', ()=>{
                     }
           })();
 
-          const secInstallation = document.querySelector('#installation');
-          secInstallation.onclick = ()=>{
-                    window.open('/for/chrome/');
-          }
-          secInstallation.style.zIndex = '1';
-          secInstallation.style.cursor = 'pointer';
-          secInstallation.querySelectorAll('*').forEach((el)=>{
-                    el.style.zIndex = '2';
-                    el.style.pointerEvents = 'none';
+          // add following install button to #install section
+          (()=>{
+                    const secInstallation = document.querySelector('#installation');
+                    secInstallation.onclick = ()=>{
+                              window.open('/for/chrome/');
+                    }
+                    secInstallation.style.zIndex = '1';
+                    secInstallation.style.cursor = 'pointer';
+                    secInstallation.querySelectorAll('*').forEach((el)=>{
+                              el.style.zIndex = '2';
+                              el.style.pointerEvents = 'none';
+                    });
+                    const redBox = Object.assign(document.createElement('button'), {
+                              innerText: 'install',
+                              style: `
+                              font-size: 1.2rem;
+                              position: fixed;
+                              transform: translate(-50%, -50%);
+                              pointer-events: none;
+                              background: var(--greenLight);
+                              color: var(--blue);
+                              `
+                    });
+                    secInstallation.appendChild(redBox);
+                    secInstallation.addEventListener('mouseenter', ()=>{
+                              redBox.style.display = 'block';
+                    });
+                    secInstallation.addEventListener('mouseleave', ()=>{
+                              console.log('fired');
+                              redBox.style.display = 'none';
+                    });
+                    secInstallation.addEventListener('mousemove', (e)=>{
+                              var left = e.clientX;
+                              var top = e.clientY;
+                              redBox.style.top = top+'px';
+                              redBox.style.left = left+'px';
+                    });
           });
-          const redBox = Object.assign(document.createElement('button'), {
-                    innerText: 'download',
-                    style: `
-                    font-size: 1.2rem;
-                    position: fixed;
-                    transform: translate(-50%, -50%);
-                    pointer-events: none;
-                    background: var(--greenLight);
-                    color: var(--blue);
-                    `
-          });
-          secInstallation.appendChild(redBox);
-          secInstallation.addEventListener('mouseenter', ()=>{
-                    redBox.style.display = 'block';
-          });
-          secInstallation.addEventListener('mouseleave', ()=>{
-                    console.log('fired');
-                    redBox.style.display = 'none';
-          });
-          secInstallation.addEventListener('mousemove', (e)=>{
-                    var left = e.clientX;
-                    var top = e.clientY;
-                    redBox.style.top = top+'px';
-                    redBox.style.left = left+'px';
+
           const contactForm = document.querySelector('#contactForm');
 
           contactForm.onsubmit = ()=>{
