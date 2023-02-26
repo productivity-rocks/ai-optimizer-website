@@ -45,7 +45,110 @@ window.addEventListener('load', ()=>{
                     var top = e.clientY;
                     redBox.style.top = top+'px';
                     redBox.style.left = left+'px';
+          const contactForm = document.querySelector('#contactForm');
+
+          contactForm.onsubmit = ()=>{
+
+                    const valueMail = contactForm.querySelector('[name="mail"]').value;
+                    const valueType = contactForm.querySelector('[name="type"]').value;
+                    const valueMessage = contactForm.querySelector('[name="message"]').value;
+
+                    if(!valueMail || !valueType || !valueMessage) {
+                              toast('Fill all fields!');
+                              return;
+                    }
+          
+                    // Set Data as JSON
+                    const data = {
+                              "mail": valueMail,
+                              "type": valueType,
+                              "message": valueMessage,
+                    };
+
+                    // Create XHR Request
+                    var xhr = new XMLHttpRequest();
+
+                    // Setup XHR Request
+                    var xhrURL = "https://productivity.rocks/tool/ai-optimizer/api/contact/";
+                    xhr.open("POST", xhrURL, true);
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.setRequestHeader("Accept", "application/json");
+
+                    // On XHR Request Change
+                    xhr.onreadystatechange = function () {
+                              // On XHR Ready
+                              if (xhr.readyState === 4) {
+                                        try {
+                                                  // response
+                                                  var response = JSON.parse(xhr.responseText);
+                                                  if(response['error']) {
+                                                            // not send
+                                                            toast('not send', {type: 'Error: Try again!'});
+                                                  } else if(!response['error']) {
+                                                            // send
+                                                            toast('Sent: We\'ll answer asap!');
+                                                            contactForm.reset();
+                                                  } else {
+                                                            throw new Error(`No information from server!`);
+                                                  }
+                                        } catch (error) {
+                                                  console.log(error);
+                                                  toast('Server Error: We\' fix it!', {type: 'error'});
+                                        }
+                              }
+                    };
+                    // Send XHR Request
+                    xhr.send(JSON.stringify(data));
+          }
+});
+
+function toast(msg, data = {}) {
+          let typeColor = 'var(--hGreen), var(--sGreen), var(--lGreen)';
+          if(data.type && data.type === 'warn') {
+                    typeColor = 'var(--hWarn), var(--sWarn), var(--lWarn)';
+          } else if(data.type === 'error') {
+                    typeColor = 'var(--hError), var(--sError), var(--lError)';
+          }
+
+          var style = `
+          bottom: -315px; right: 15px;
+          transition: .8s  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          cursor: pointer;
+          z-index: 10000;
+          position: fixed;
+
+          font-family: sans-serif;
+          width: 100%; max-width: 300px;
+          color: white;
+          box-shadow: hsla(${typeColor}, 1) 0px 30px 90px;
+          padding: 0.8rem;
+          border-radius: 5px;
+          border: 1px solid hsl(${typeColor});
+          background: var(--blue);
+          `;
+          if (document.getElementById('toast')) {
+                    document.getElementById('toast').remove();
+          }
+          var toast = Object.assign(document.createElement('div'), {
+                    id: 'toast',
+                    style: style,
+                    innerText: msg,
+                    onclick: () => {
+                              if(data['callback']) {data['callback']()};
+                              document.getElementById('toast').remove();
+                    }
           });
+          document.body.appendChild(toast);
+          setTimeout(() => {
+                    toast.style.bottom = '20px';
+                    setTimeout(() => {
+                              toast.style.bottom = '-315px';
+                              setTimeout(() => {
+                                        toast.parentNode.removeChild(toast);
+                              }, 1000)
+                    }, 2000)
+          }, 100);
+}
 
 // details (for faq)
 class Details {

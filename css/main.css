@@ -10,8 +10,23 @@
           --white: #e0e7ec;
           --gray: #99a3a9;
           --grayLight:  #B6BABC;
+          /* green */
           --green: #3c4f5e;
+          --hGreen: 206;
+          --sGreen: 22%;
+          --lGreen: 30%;
+          /* greenLight */
           --greenLight: #bed0cb;
+          /* warn */
+          --hWarn: 37;
+          --sWarn: 90%;
+          --lWarn: 51%;
+          --warn: #f39c12;
+          /* error */
+          --error: #e74c3c;
+          --hError: 6;
+          --sError: 78%;
+          --lError: 57%;
 }
 
 ::selection {
@@ -19,17 +34,46 @@
           color: #212933;
 }
 
+body {
+          background: var(--blue);
+}
+
 a {
           color: var(--white);
           text-decoration: none;
 }
 
+input,
+select,
+textarea,
 button {
+          font-size: 1rem;
           border-radius: 10px;
-          padding: .4em;
+          padding: .6em;
           border: none;
           color: var(--green);
           background-color: var(--greenLight);
+          outline: none;
+          resize: none;
+}
+button {
+          color: var(--greenLight);
+          background-color: var(--green);
+          cursor: pointer;
+}
+input,
+select,
+textarea {
+          padding: .4em .6rem;
+          border: 3px solid var(--gray);
+}
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+          font: 1rem;
+          letter-spacing: .05em;
+          color: #596e7e;
+}
 
 code {
           font-family: monospace;
