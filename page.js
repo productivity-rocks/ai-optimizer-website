@@ -23,7 +23,7 @@ window.addEventListener("load", () => {
   // add following install button to #install section
   const secInstallation = document.querySelector("#installation");
   secInstallation.onclick = () => {
-    window.open("/for/chrome/");
+    window.open(window.location.href+"/for/chrome/");
   };
   secInstallation.style.zIndex = "1";
   secInstallation.style.cursor = "pointer";
