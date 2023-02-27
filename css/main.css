@@ -43,6 +43,10 @@ a {
           text-decoration: none;
 }
 
+ul, ol {
+    padding-left: 1rem;
+}
+
 input,
 select,
 textarea,

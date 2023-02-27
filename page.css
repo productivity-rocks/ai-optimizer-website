@@ -9,7 +9,8 @@ header {
 #start,
 #features,
 #installation,
-#upcoming {
+#upcoming,
+#outro {
     background: #212933;
     color: #99a3a9;
     padding: 10% 5%;
@@ -18,10 +19,6 @@ header {
     gap: 1rem;
     z-index: 2;
     position: relative;
-}
-
-ul {
-    margin-left: 1rem;
 }
 
 #start {
@@ -93,19 +90,22 @@ h2 {
 }
 
 #features .cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-flow: row;
     gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
 
 #features .card {
+    margin: 0 auto;
     border-radius: 10px;
     color: #bed0cb;
     background: #212933;
     overflow: hidden;
+    width: 90vw;
     max-width: 400px;
+    transition: none;
 }
 
 #features .card img {

@@ -82,7 +82,7 @@
                         <p>Style your ChatGPT experience the way you like</p>
                     </div>
                 </div>
-                <div jrtAnimation='["fadeBotRight"]' style="display: flex; flex-direction: column; gap: .6rem; margin: auto;">
+                <!-- <div jrtAnimation='["fadeBotRight"]' style="display: flex; flex-direction: column; gap: .6rem; margin: auto;">
                     <h4>Current Features:</h4>
                     <ul>
                         <li>
@@ -112,7 +112,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </section>
         <section id="installation">
             <h2>Installation</h2>
