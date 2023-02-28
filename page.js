@@ -1,4 +1,22 @@
+window.addEventListener('scroll', (e)=>{
+  console.log(window.scrollY);
+  if(window.scrollY > 150) {
+    document.querySelector('header').classList.add('visible');
+  } else {
+    document.querySelector('header').classList.remove('visible');
+  }
+})
 window.addEventListener("load", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const redirectNotification = urlParams.get('redirectNotification');
+  if (redirectNotification) {
+    element = document.createElement('div');
+    element.setAttribute('type', 'warn');
+    document.querySelector('header').appendChild(Object.assign(element, {
+      classList: 'notify',
+      innerText: redirectNotification,
+    }))
+  }
   document.querySelectorAll(".selectWrap").forEach((selectWrap) => {
     const select = selectWrap.querySelector("select");
     select &&

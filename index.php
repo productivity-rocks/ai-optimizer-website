@@ -14,16 +14,10 @@
 
 <body>
     <header>
-        <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            const redirectNotification = urlParams.get('redirectNotification');
-            if (redirectNotification) {
-                document.querySelector('header').innerText = redirectNotification;
-            } else {
-                document.querySelector('header').style.display = 'none';
-            }
-            console.log(redirectNotification);
-        </script>
+        <div class="content">
+            <h1>ChatGPT Optimizer</h1>
+            <a href="https://productivity.rocks/tool/ai-optimizer/for/chrome/">Download for Chrome</a>
+        </div>
     </header>
     <main>
         <section id="start">

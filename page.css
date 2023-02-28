@@ -1,8 +1,46 @@
 header {
-    padding: .2rem .4rem;
+    top: 0px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10001;
+}
+header .content {
+    /* opacity: .5;
+    transform: translateY(-100%); */
+    background: transparent;
+    transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    color: var(--white);
+    padding: 1.6rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header.visible .content {
+    padding: .8rem 5%;
+    opacity: 1;
+    transform: translateY(0%);
+    background: #3c4f5f;
+    box-shadow: rgb(0 0 0 / 6%) 0px 6px 24px;
+}
+header .content h1 {
+    font-size: 1rem;
+}
+header .content a {
+    padding: .6rem;
+    font-size: .8rem;
+    border-radius: 1rem;
+    color: var(--green);
+    background: var(--greenLight);
+}
+header .notify {
+    padding: .2rem 5%;
     display: grid;
     place-items: center;
     color: #1e1e1e;
+}
+header .notify[type="warn"] {
     background: #f39c12;
 }
 
