@@ -188,7 +188,8 @@ h2 {
 }
 
 #outro {
-    padding-bottom: 2rem;
+    padding-top: 0;
+    padding-bottom: 6rem;
     display: grid;
     place-items: center;
 }
