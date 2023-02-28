@@ -12,9 +12,12 @@ window.addEventListener("load", () => {
   if (redirectNotification) {
     element = document.createElement('div');
     element.setAttribute('type', 'warn');
-    document.querySelector('header').appendChild(Object.assign(element, {
+    document.querySelector('header').insertBefore(Object.assign(element, {
       classList: 'notify',
       innerText: redirectNotification,
+    }), document.querySelector('header .content'))
+  }
+
   followMouse(document.querySelector('#start .right img'));
   function followMouse(element) {
     // Items to animate
