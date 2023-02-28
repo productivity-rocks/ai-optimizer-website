@@ -6,11 +6,8 @@ header {
     z-index: 10001;
 }
 header .content {
-    /* opacity: .5;
-    transform: translateY(-100%); */
-    background: transparent;
-    transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1);
-
+    background: transparent; /* for animation*/
+    transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1); /* for animation*/
     color: var(--white);
     padding: 1.6rem 5%;
     display: flex;
@@ -60,6 +57,7 @@ header .notify[type="warn"] {
 }
 
 #start {
+    padding-top: 6rem;
     height: fit-content;
     min-height: 90vh;
     display: flex;
@@ -67,22 +65,19 @@ header .notify[type="warn"] {
     align-items: center;
     gap: 4rem;
 }
-
 #start .left {
-    max-width: 55%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.2rem;
 }
-
 #start .right {
     display: grid;
     place-items: center;
     width: 100%;
     height: fit-content;
 }
-
 #start .right img {
     border-radius: 15px;
     width: 100%;
@@ -91,24 +86,17 @@ header .notify[type="warn"] {
     object-fit: cover;
     object-position: center center;
 }
-
 #start h1 {
     font-size: clamp(12px, 10vw, 48px);
     line-height: 1.2em;
     color: #B6BABC;
     margin-bottom: 1rem;
 }
-
 #start p {
-    font-size: 12px;
-    font-weight: 200;
-}
-
-#start p span {
-    font-size: 16px;
-    font-weight: 800;
-    display: block;
     margin-bottom: 0.4rem;
+    font-size: .8rem;
+    line-height: 1.4em;
+    font-weight: 200;
 }
 
 h2 {
@@ -228,5 +216,11 @@ h2 {
 @media screen and (max-width: 768px) {
     #start .right {
         display: none;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    #start p {
+        font-size: 1rem;
     }
 }

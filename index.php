@@ -23,14 +23,10 @@
         <section id="start">
             <div class="left" jrtAnimation='["fadeBotLeft"]'>
                 <h1>The ChatGPT<br>Optimizing Extension</h1>
-                <p>
-                    <span>
-                        Supercharge Your ChatGPT Experience with Our Powerful Extension & Unlock the Full Potential of ChatGPT with Features Designed to Boost Your Productivity
-                    </span>
-                </p>
+                <p><b>Supercharge</b> Your ChatGPT Experience with Our Powerful Extension & <b>Unlock</b> the <b>Full Potential</b> of ChatGPT with Features Designed to <b>Boost</b> Your <b>Productivity</b></p>
                 <div style="display: flex; gap: .6rem; align-items: center; flex-wrap: wrap;">
                     <a href="https://productivity.rocks/tool/ai-optimizer/for/chrome/" target="_blank"
-                        style="max-width: min-content;"><img style="max-height: 42px;"
+                        style="max-width: min-content;"><img style="max-height: 42px; border-radius: .6rem"
                             src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png"></a>
                     <a href="https://www.producthunt.com/posts/chatgpt-optimizer-for-chrome?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-chatgpt&#0045;optimizer&#0045;for&#0045;chrome"
                         target="_blank"><img

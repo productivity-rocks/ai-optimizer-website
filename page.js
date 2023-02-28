@@ -15,8 +15,77 @@ window.addEventListener("load", () => {
     document.querySelector('header').appendChild(Object.assign(element, {
       classList: 'notify',
       innerText: redirectNotification,
-    }))
+  followMouse(document.querySelector('#start .right img'));
+  function followMouse(element) {
+    // Items to animate
+    styles = window.getComputedStyle(element);
+    const cardInside = element;
+    console.log(element.style.background);
+    cardInside.style.position = 'relative';
+    const cardOutside = Object.assign(document.createElement('div'), {
+      style: `
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      width: calc(100% + 1rem);
+      height: calc(100% + 1rem);
+      `
+    });
+    const newEl = Object.assign(document.createElement('div'), {
+      style: cardInside.style,
+      classList: cardInside.classList.value
+    });
+    cardInside.style = '';
+    cardInside.style.overflow = styles.overflow;
+    cardInside.style.background = styles.background;
+    console.log(newEl.style.background);
+    cardInside.classList = '';
+    cardInside.replaceWith(newEl);
+    newEl.style.overflow = 'inherit';
+    newEl.style.background = 'transparent';
+    newEl.appendChild(cardInside);
+    newEl.appendChild(cardOutside);
+
+    // Track card on mousemove ib container
+    cardOutside.addEventListener("mousemove", (e) => {
+      // Get the center of the card
+      const cardRect = cardOutside.getBoundingClientRect();
+      const cardCenterX = cardRect.left + cardRect.width / 2;
+      const cardCenterY = cardRect.top + cardRect.height / 2;
+    
+      // Calculate the angle between the center of the card and the mouse pointer
+      const angleX = (e.clientY - cardCenterY) / (cardRect.height / 2);
+      const angleY = (e.clientX - cardCenterX) / (cardRect.width / 2);
+    
+      // Rotate the card to face the mouse
+      cardInside.style.transform = `rotateX(${angleX * 15}deg) rotateY(${-angleY * 15}deg)`;
+    });
+    
+    // Animate In
+    // Test if mouse enters cardOutside
+    cardOutside.addEventListener("mouseenter", (e) => {
+      // Add the transition for a smooth transition
+      cardInside.style.transition = "all 0.09s ease";
+      // Jump to the wait funktion
+      waitBeforeContinue();
+    });
+    // Wait funtion
+    const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+    const waitBeforeContinue = async () => {
+      // Wait before executing netxt command
+      await delay(90);
+      // Remove the transition style after transition in
+      cardInside.style.transition = "none";
+    };
+
+    // Animate Out
+    cardOutside.addEventListener("mouseleave", (e) => {
+      cardInside.style.transition = "all 0.5s ease";
+      cardInside.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    });
   }
+
   document.querySelectorAll(".selectWrap").forEach((selectWrap) => {
     const select = selectWrap.querySelector("select");
     select &&
