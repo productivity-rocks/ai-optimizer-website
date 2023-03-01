@@ -167,6 +167,7 @@ h2 {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    row-gap: 4rem;
 }
 
 #upcoming ul li {

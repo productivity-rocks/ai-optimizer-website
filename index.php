@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/main.css?l=<?php echo uniqid() ?>">
     <link rel="stylesheet" href="page.css?l=2">
     <script src="https://jrt-companies.com/on-scroll-animations/script/"></script>
+    <script src="assets/js/general.js"></script>
     <script src="page.js"> </script>
 </head>
 
@@ -113,19 +114,23 @@
         </section>
         <section id="upcoming">
             <div class="left">
-                <h4 jrtAnimation='["fadeBotLeft"]'>Planned Features:</h4>
+                <h4 jrtAnimation='["fadeBotLeft"]' style="margin-bottom: 1.8rem;">Next Big Features:</h4>
                 <ul jrtAnimation='["fadeBotLeft"]'>
-                    <li>
-                        <h4>Integration in Search Engines</h4>
-                        <p>Use ChatGPT to enhance your search results</p>
+                    <li style="list-style: '💡'; padding-left: .8rem; margin-left: 1rem;">
+                        <h4>Integrate Everywhere</h4>
+                        <p>Use ChatGPT in LinkedIn, Search Engines and more!</p>
                     </li>
-                    <li>
-                        <h4>Integration in G-Mail</h4>
-                        <p>Use ChatGPT to compose better emails</p>
+                    <li style="list-style: '💪'; padding-left: .8rem; margin-left: 1rem;">
+                        <h4>Multiple AI integration</h4>
+                        <p>Prompt from here directly to Dall-E and others</p>
                     </li>
-                    <li>
-                        <h4>Integration LinkedIn</h4>
-                        <p>Use ChatGPT to enhance your LinkedIn profile</p>
+                    <li style="list-style: '💬'; padding-left: .8rem; margin-left: 1rem;">
+                        <h4>Improved Messages</h4>
+                        <p>Preview SVGs, Highlight HEX codes and auto-split too large messages</p>
+                    </li>
+                    <li style="list-style: '🤖'; padding-left: .8rem; margin-left: 1rem;">
+                        <h4>Prompt Assistant</h4>
+                        <p>Learn how to improve you prompt and add prompt templates</p>
                     </li>
                 </ul>
             </div>
