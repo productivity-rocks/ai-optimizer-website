@@ -1,6 +1,9 @@
 window.addEventListener("load", () => {
     const button = document.querySelector("button");
     const textarea = document.querySelector("textarea");
+    const mail = document.querySelector("input[type='email']");
+    const featureTable = document.querySelector("table");
+
     textarea.addEventListener("focusout", () => {
         button.classList.remove("standStill");
     });
@@ -13,18 +16,27 @@ window.addEventListener("load", () => {
     textarea.addEventListener("mouseenter", () => {
         button.classList.add("standStill");
     });
+    
+    textarea.addEventListener("input", ()=>{
+        mail.style.display = 'block';
+    })
 
     button.onclick = () => {
-        const pMessage = textarea.value;
+        let pMessage = textarea.value;
+        let pMail = mail.value;
 
         if (!pMessage) {
             toast("please fill fields");
             return;
         }
 
+        if(pMail === undefined || pMail === '') {
+            pMail = 'no-mail-provided@productivity.rocks';
+        }
+
         // Set Data as JSON
         const data = {
-            mail: "fromextensionwebsite@mail.de",
+            mail: pMail,
             type: "feedback",
             message: pMessage,
         };
@@ -52,6 +64,7 @@ window.addEventListener("load", () => {
                         // send
                         toast("Sent: We'll answer asap!");
                         textarea.value = "";
+                        featureTable.scrollIntoView({ behavior: "smooth" });
                     } else {
                         throw new Error(`No information from server!`);
                     }
