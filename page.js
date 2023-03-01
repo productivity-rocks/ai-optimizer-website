@@ -112,40 +112,52 @@ window.addEventListener("load", () => {
 
   // add following install button to #install section
   const secInstallation = document.querySelector("#installation");
-  secInstallation.onclick = () => {
-    window.open(window.location.href+"/for/chrome/");
-  };
+  secInstallation.onclick = () => {window.open(window.location.href+"/for/chrome/")};
   secInstallation.style.zIndex = "1";
   secInstallation.style.cursor = "pointer";
   secInstallation.querySelectorAll("*").forEach((el) => {
     el.style.zIndex = "2";
     el.style.pointerEvents = "none";
   });
-  const redBox = Object.assign(document.createElement("button"), {
-    innerText: "install",
+  // secInstallation.querySelector('.list').style.display = 'none';
+  const followingInstallBtn = Object.assign(document.createElement("button"), {
+    innerText: "install me",
     style: `
-                    font-size: 1.2rem;
-                    position: fixed;
-                    transform: translate(-50%, -50%);
-                    pointer-events: none;
-                    background: var(--greenLight);
-                    color: var(--blue);
-                    `,
+      padding: .4rem .6rem;
+      font-size: 1.2rem;
+      position: fixed;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition: top .2s ease-out, left .2s ease-out, rotate .2s ease-out, opacity .2s ease-out;
+      transition-timing-function: ease-out;
+      border: .2rem solid var(--greenLight);
+      color: var(--greenLight);
+      `,
   });
-  secInstallation.appendChild(redBox);
-  secInstallation.addEventListener("mouseenter", () => {
-    redBox.style.display = "block";
+  secInstallation.appendChild(followingInstallBtn);
+  // movement
+  let mouseX = 0;
+  let mouseY = 0;
+  let mouseDeg = 0;
+  window.addEventListener("mousemove", (event) => {
+    mouseY = event.clientY  + "px";
+    mouseX = event.clientX + "px";
+    mouseDeg = event.movementX + "deg";
   });
-  secInstallation.addEventListener("mouseleave", () => {
-    console.log("fired");
-    redBox.style.display = "none";
+  secInstallation.addEventListener("mouseenter", (event) => {
+      followingInstallBtn.style.opacity = ".5";
   });
-  secInstallation.addEventListener("mousemove", (e) => {
-    var left = e.clientX;
-    var top = e.clientY;
-    redBox.style.top = top + "px";
-    redBox.style.left = left + "px";
+  secInstallation.addEventListener("mouseleave", (event) => {
+      followingInstallBtn.style.opacity = "0";
   });
+  const mouseMove = () => {
+    followingInstallBtn.style.top = mouseY;
+    followingInstallBtn.style.left = mouseX;
+    followingInstallBtn.style.rotate = mouseDeg;
+    window.requestAnimationFrame(mouseMove);
+  };
+  mouseMove();
+
 
   const contactForm = document.querySelector("#contactForm");
 
