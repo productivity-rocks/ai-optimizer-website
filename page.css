@@ -131,7 +131,10 @@ h2 {
     overflow: hidden;
     width: 90vw;
     max-width: 400px;
-    transition: none;
+    transition: .2s ease-in-out;
+}
+#features .card:hover {
+    scale: 1.01;
 }
 
 #features .card img {
@@ -154,6 +157,9 @@ h2 {
 #installation {
     color: #99a3a9;
     background: #3c4f5e;
+}
+#installation video {
+    border-radius: 15px;
 }
 
 #upcoming {

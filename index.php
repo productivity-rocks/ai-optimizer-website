@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGPT Optimizer | Productivity Rocks</title>
     <link rel="stylesheet" href="./css/main.css?l=<?php echo uniqid() ?>">
-    <link rel="stylesheet" href="page.css?l=1">
+    <link rel="stylesheet" href="page.css?l=2">
     <script src="https://jrt-companies.com/on-scroll-animations/script/"></script>
     <script src="page.js"> </script>
 </head>
@@ -105,20 +105,10 @@
             </div> -->
         </section>
         <section id="installation">
-            <h2>Installation</h2>
-
-            <h4>Step 1:</h4>
-            <p  jrtAnimation='["fadeLeft"]'>Visit the Chrome Web Store and search for "ChatGPT Optimizer"</p>
-
-            <h4>Step 2:</h4>
-            <p  jrtAnimation='["fadeLeft"]'>Click the "Add to Chrome" button</p>
-
-            <h4>Step 3:</h4>
-            <p  jrtAnimation='["fadeLeft"]'>The extension will automatically install and activate</p>
-
-            <h4>Step 4:</h4>
-            <p  jrtAnimation='["fadeLeft"]'>Start using the ChatGPT Optimizer to boost your productivity and streamline your workflow</p>
-            <p  jrtAnimation='["fadeLeft"]'>Don't wait any longer, download the ChatGPT Optimizer now and start seeing the benefits for yourself!</p>
+            <video autoplay loop>
+                <source src="back.mov" type="video/quicktime">
+                Your browser does not support the video tag.
+            </video>
         </section>
         <section id="upcoming">
             <div class="left">

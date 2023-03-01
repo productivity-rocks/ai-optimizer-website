@@ -58,8 +58,8 @@ window.addEventListener("load", () => {
       const cardCenterY = cardRect.top + cardRect.height / 2;
     
       // Calculate the angle between the center of the card and the mouse pointer
-      const angleX = (e.clientY - cardCenterY) / (cardRect.height / 2);
-      const angleY = (e.clientX - cardCenterX) / (cardRect.width / 2);
+      const angleX = (e.clientY - cardCenterY) / (cardRect.height * 1);
+      const angleY = (e.clientX - cardCenterX) / (cardRect.width * 1);
     
       // Rotate the card to face the mouse
       cardInside.style.transform = `rotateX(${angleX * 15}deg) rotateY(${-angleY * 15}deg)`;
@@ -128,10 +128,11 @@ window.addEventListener("load", () => {
       position: fixed;
       transform: translate(-50%, -50%);
       pointer-events: none;
-      transition: top .2s ease-out, left .2s ease-out, rotate .2s ease-out, opacity .2s ease-out;
+      transition: top .15s ease-out, left .15s ease-out, rotate .15s ease-out, opacity .2s ease-out;
       transition-timing-function: ease-out;
       border: .2rem solid var(--greenLight);
       color: var(--greenLight);
+      z-index: 10;
       `,
   });
   secInstallation.appendChild(followingInstallBtn);
@@ -145,7 +146,7 @@ window.addEventListener("load", () => {
     mouseDeg = event.movementX + "deg";
   });
   secInstallation.addEventListener("mouseenter", (event) => {
-      followingInstallBtn.style.opacity = ".5";
+      followingInstallBtn.style.opacity = "1";
   });
   secInstallation.addEventListener("mouseleave", (event) => {
       followingInstallBtn.style.opacity = "0";
