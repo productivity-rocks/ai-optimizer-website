@@ -106,7 +106,7 @@
             </div> -->
         </section>
         <section id="installation">
-            <video autoplay loop>
+            <video autoplay loop muted>
                 <source src="back.mov" type="video/quicktime">
                 <source src="back.mp4" type="video/mp4">
                 Your browser does not support the video tag.
