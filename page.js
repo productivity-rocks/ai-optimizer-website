@@ -128,6 +128,7 @@ window.addEventListener("load", () => {
       position: fixed;
       transform: translate(-50%, -50%);
       pointer-events: none;
+      opacity: 0;
       transition: top .15s ease-out, left .15s ease-out, rotate .15s ease-out, opacity .2s ease-out;
       transition-timing-function: ease-out;
       border: .2rem solid var(--greenLight);
