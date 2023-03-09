@@ -40,7 +40,11 @@
                 </div>
             </div>
             <div class="right" jrtAnimation='["fadeBotRight"]'>
-                <img src="ai-knows.png">
+                <video autoplay loop muted>
+                    <source src="back.mov" type="video/quicktime">
+                    <source src="back.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </section>
         <section id="features">

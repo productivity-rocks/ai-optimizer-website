@@ -33,16 +33,14 @@
 #start .right {
     display: grid;
     place-items: center;
-    width: 100%;
+    width: 50%;
     height: fit-content;
 }
-#start .right img {
+#start .right video {
     border-radius: 15px;
-    width: 100%;
     min-height: 300px;
     height: 45vh;
-    object-fit: cover;
-    object-position: center center;
+    overflow: none;
 }
 #start h1 {
     font-size: clamp(12px, 10vw, 48px);
@@ -117,10 +115,12 @@ h2 {
     background: #3c4f5e;
 }
 #installation .videoWrap {
-    place-items: center;
-    display: grid;
+    display: contents;
+    width: 100%;
 }
 #installation video {
+    margin: auto;
+    max-width: 100%;
     max-height: 70vh;
     border-radius: 15px;
 }
