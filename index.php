@@ -29,8 +29,9 @@
                     <a href="https://productivity.rocks/tool/ai-optimizer/for/chrome/" target="_blank"
                         style="max-width: min-content;"><img style="max-height: 42px; border-radius: .6rem"
                             src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png"></a>
-                    <a href="https://productivity.rocks/tool/ai-optimizer/for/chrome/" target="_blank"
-                        style="max-width: min-content;"><img style="max-height: 42px; border-radius: .6rem; border: 1px solid rgb(75, 75, 170);"
+                    <a href="https://addons.mozilla.org/en-US/firefox/addon/chatgpt-optimizer-improve-ai/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" target="_blank"
+                        style="max-width: min-con
+                        tent;"><img style="max-height: 42px; border-radius: .6rem; border: 1px solid rgb(75, 75, 170);"
                             src="firefox.png"></a>
                     <a href="https://www.producthunt.com/posts/chatgpt-optimizer-for-chrome?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-chatgpt&#0045;optimizer&#0045;for&#0045;chrome"
                         target="_blank"><img
