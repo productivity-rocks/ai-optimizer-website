@@ -51,28 +51,24 @@
                 <div jrtAnimation='["fadeBotLeft"]' class="card">
                     <img src="imgs/features/1-interaction.png">
                     <div class="text">
-                        <h4>Copy buttons (Plain & HTML)</h4>
                         <p>Quickly and easily copy the output from ChatGPT in either plain text or HTML format</p>
                     </div>
                 </div>
                 <div jrtAnimation='["fadeBot"]' class="card">
                     <img src="imgs/features/3-prompt-everywhere.png">
                     <div class="text">
-                        <h4>Prompt from Everywhere</h4>
                         <p>Prompt documents, text selection or directly from searchbar into ChatGPT</p>
                     </div>
                 </div>
                 <div jrtAnimation='["fadeBotRight"]' class="card">
                     <img src="imgs/features/4-share-it.png">
                     <div class="text">
-                        <h4>Share Chats</h4>
                         <p>Share Chats in different formats from JSON, Screenshot to Links</p>
                     </div>
                 </div>
                 <div jrtAnimation='["fadeBot"]' class="card">
                     <img src="imgs/features/2-theme.png">
                     <div class="text">
-                        <h4>Multiple Themes</h4>
                         <p>Style your ChatGPT experience the way you like</p>
                     </div>
                 </div>
