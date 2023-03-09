@@ -106,11 +106,13 @@
             </div> -->
         </section>
         <section id="installation">
-            <video autoplay loop muted>
-                <source src="back.mov" type="video/quicktime">
-                <source src="back.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="videoWrap">
+                <video autoplay loop muted>
+                    <source src="back.mov?php" type="video/quicktime">
+                    <source src="back.mp4?php" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </section>
         <section id="upcoming">
             <div class="left">

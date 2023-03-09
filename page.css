@@ -116,7 +116,12 @@ h2 {
     color: #99a3a9;
     background: #3c4f5e;
 }
+#installation .videoWrap {
+    place-items: center;
+    display: grid;
+}
 #installation video {
+    max-height: 70vh;
     border-radius: 15px;
 }
 
