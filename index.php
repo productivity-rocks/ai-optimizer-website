@@ -5,9 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Optimizer | Productivity Rocks</title>
     <link rel="stylesheet" href="./css/main.css?l=<?php echo uniqid() ?>">
-    <link rel="stylesheet" href="page.css?l=2">
+    <link rel="stylesheet" href="page.css?l=3">
+
+    <title>ChatGPT Optimizer | By Productivity Rocks</title>
+    <meta name="description" content="Supercharge Your ChatGPT Experience with Our Powerful Extension & Unlock the Full Potential of ChatGPT with Features Designed to Boost Your Productivity">
+    <meta name="keywords" content="chatgpt, gpt, chrome extension, productivity tool, chatgpt optimizer">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="ChatGPT Optimizer | By Productivity Rocks">
+    <meta property="og:description" content="Supercharge Your ChatGPT Experience with Our Powerful Extension & Unlock the Full Potential of ChatGPT with Features Designed to Boost Your Productivity">
+    <meta property="og:image" content="https://www.productivity.rocks/tool/ai-optimizer/assets/web-og-large.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.productivity.rocks/tool/ai-optimizer/">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
     <script src="https://jrt-companies.com/on-scroll-animations/script/"></script>
     <script src="assets/js/general.js"></script>
     <script src="page.js"> </script>
