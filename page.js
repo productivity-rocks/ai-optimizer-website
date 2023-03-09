@@ -5,7 +5,14 @@ window.addEventListener('scroll', (e)=>{
     document.querySelector('header').classList.remove('visible');
   }
 })
-window.addEventListener("load", () => {
+
+if (/Mobi/.test(navigator.userAgent)) {
+  // User is accessing from a mobile device
+} else {
+  // User is accessing from a desktop device
+}
+
+window.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   const redirectNotification = urlParams.get('redirectNotification');
   if (redirectNotification) {
@@ -18,14 +25,9 @@ window.addEventListener("load", () => {
   }
 
   // followMouse(document.querySelector('#start .right img'));
-  followMouse(document.querySelector('#start .right img'));
-  // followMouse(document.querySelector('#start .right img'));
-  followMouse(document.querySelector('#start .right img'));
-  // followMouse(document.querySelector('#start .right img'));
-  followMouse(document.querySelector('#start .right img'));
-  // followMouse(document.querySelector('#start .right img'));
-  followMouse(document.querySelector('#start .right img'));
-  // followMouse(document.querySelector('#start .right img'));
+  // document.querySelectorAll('#features .card').forEach((el)=>{
+  //   followMouse(el);
+  // });
   function followMouse(element) {
     // Items to animate
     styles = window.getComputedStyle(element);

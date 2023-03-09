@@ -1,3 +1,7 @@
+<?php
+header("Cache-Control: max-age=3600, public");
+header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,25 +77,41 @@
 
             <div class="cards">
                 <div jrtAnimation='["fadeBotLeft"]' class="card">
-                    <img src="imgs/features/1-interaction.png" alt="Quick Actions For Messages Allow Faster Interaction">
+                    <picture>
+                        <source srcset="imgs/features/1-interaction.webp" type="image/webp">
+                        <source srcset="imgs/features/1-interaction.png" type="image/png">
+                        <img src="imgs/features/1-interaction.png" alt="Quick Actions For Messages Allow Faster Interaction">
+                    </picture>
                     <div class="text">
                         <p>Quickly and easily copy the output from ChatGPT in either plain text or HTML format</p>
                     </div>
                 </div>
                 <div jrtAnimation='["fadeBot"]' class="card">
-                    <img src="imgs/features/3-prompt-everywhere.png" alt="Use Multiple Ways To Prompt To ChatGPT">
+                    <picture>
+                        <source srcset="imgs/features/3-prompt-everywhere.webp" type="image/webp">
+                        <source srcset="imgs/features/3-prompt-everywhere.png" type="image/png">
+                        <img src="imgs/features/3-prompt-everywhere.png" alt="Use Multiple Ways To Prompt To ChatGPT">
+                    </picture>
                     <div class="text">
                         <p>Prompt documents, text selection or directly from searchbar into ChatGPT</p>
                     </div>
                 </div>
                 <div jrtAnimation='["fadeBotRight"]' class="card">
-                    <img src="imgs/features/4-share-it.png"  alt="Export Ans Share ChatGPT Chats With Whoever You Want">
+                    <picture>
+                        <source srcset="imgs/features/4-share-it.webp" type="image/webp">
+                        <source srcset="imgs/features/4-share-it.png" type="image/png">
+                        <img src="imgs/features/4-share-it.png"  alt="Export Ans Share ChatGPT Chats With Whoever You Want">
+                    </picture>
                     <div class="text">
                         <p>Share Chats in different formats from JSON, Screenshot to Links</p>
                     </div>
                 </div>
                 <div jrtAnimation='["fadeBot"]' class="card">
-                    <img src="imgs/features/2-theme.png"  alt="Style Your ChatGPT With Custom Themes">
+                    <picture>
+                        <source srcset="imgs/features/2-theme.webp" type="image/webp">
+                        <source srcset="imgs/features/2-theme.png" type="image/png">
+                        <img src="imgs/features/2-theme.png"  alt="Style Your ChatGPT With Custom Themes">
+                    </picture>
                     <div class="text">
                         <p>Style your ChatGPT experience the way you like</p>
                     </div>
