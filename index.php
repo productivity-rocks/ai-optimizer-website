@@ -160,13 +160,13 @@
             </a>
             <h3>FAQ</h3>
             <div class="detailsGroup">
-                <details class="details" open>
+                <details class="details">
                     <summary>Is the extension free?</summary>
                     <div class="detailsContent">
                         <p>Yes, the extension is currently free and will stay with a free plan forever. However, the team is working on features that will integrate other APIs, which users will have to pay to use.</p>
                     </div>
                 </details>
-                <details class="details">
+                <details class="details" open>
                     <summary>Will there be new features or integrations added to ChatGPT Optimizer?</summary>
                     <div class="detailsContent">
                         <p>Yes, the chance is high that someone is preparing the new update while you're reading this. In the future there will also be more integrations than just a Chrome Extension.</p>

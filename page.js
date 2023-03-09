@@ -17,7 +17,15 @@ window.addEventListener("load", () => {
     }), document.querySelector('header .content'))
   }
 
+  // followMouse(document.querySelector('#start .right img'));
   followMouse(document.querySelector('#start .right img'));
+  // followMouse(document.querySelector('#start .right img'));
+  followMouse(document.querySelector('#start .right img'));
+  // followMouse(document.querySelector('#start .right img'));
+  followMouse(document.querySelector('#start .right img'));
+  // followMouse(document.querySelector('#start .right img'));
+  followMouse(document.querySelector('#start .right img'));
+  // followMouse(document.querySelector('#start .right img'));
   function followMouse(element) {
     // Items to animate
     styles = window.getComputedStyle(element);
