@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="right" jrtAnimation='["fadeBotRight"]'>
-                <video autoplay loop muted>
+                <video autoplay loop muted async>
                     <source src="back.mov" type="video/quicktime">
                     <source src="back.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -73,25 +73,25 @@
 
             <div class="cards">
                 <div jrtAnimation='["fadeBotLeft"]' class="card">
-                    <img src="imgs/features/1-interaction.png">
+                    <img src="imgs/features/1-interaction.png" alt="Quick Actions For Messages Allow Faster Interaction">
                     <div class="text">
                         <p>Quickly and easily copy the output from ChatGPT in either plain text or HTML format</p>
                     </div>
                 </div>
                 <div jrtAnimation='["fadeBot"]' class="card">
-                    <img src="imgs/features/3-prompt-everywhere.png">
+                    <img src="imgs/features/3-prompt-everywhere.png" alt="Use Multiple Ways To Prompt To ChatGPT">
                     <div class="text">
                         <p>Prompt documents, text selection or directly from searchbar into ChatGPT</p>
                     </div>
                 </div>
                 <div jrtAnimation='["fadeBotRight"]' class="card">
-                    <img src="imgs/features/4-share-it.png">
+                    <img src="imgs/features/4-share-it.png"  alt="Export Ans Share ChatGPT Chats With Whoever You Want">
                     <div class="text">
                         <p>Share Chats in different formats from JSON, Screenshot to Links</p>
                     </div>
                 </div>
                 <div jrtAnimation='["fadeBot"]' class="card">
-                    <img src="imgs/features/2-theme.png">
+                    <img src="imgs/features/2-theme.png"  alt="Style Your ChatGPT With Custom Themes">
                     <div class="text">
                         <p>Style your ChatGPT experience the way you like</p>
                     </div>
@@ -130,7 +130,7 @@
         </section>
         <section id="installation">
             <div class="videoWrap">
-                <video autoplay loop muted>
+                <video autoplay loop muted async>
                     <source src="back.mov?php" type="video/quicktime">
                     <source src="back.mp4?php" type="video/mp4">
                     Your browser does not support the video tag.
@@ -176,7 +176,7 @@
         </section>
         <section id="outro">
             <a href="https://www.buymeacoffee.com/ai.optimizer/" target="_blank">
-                <img src="bmc-button.png">
+                <img src="bmc-button.png" alt="Buy Me A Coffee Button For ChatGPT Optimizer Chrome Extension">
             </a>
             <h3>FAQ</h3>
             <div class="detailsGroup">
