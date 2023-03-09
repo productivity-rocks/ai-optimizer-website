@@ -1,5 +1,4 @@
 window.addEventListener('scroll', (e)=>{
-  console.log(window.scrollY);
   if(window.scrollY > 150) {
     document.querySelector('header').classList.add('visible');
   } else {
