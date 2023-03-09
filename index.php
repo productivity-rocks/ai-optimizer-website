@@ -187,6 +187,20 @@
                 </details>
             </section>
         </section>
+        <section id="customerReviews" style="display: flex; flex-direction: row;">
+            <div style="display: flex; flex-direction: column; gap: .8rem;">
+                <span>🇧🇷 In Portuguese YouTube Video</span>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4xjtj_x5BeY?start=403" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: .8rem;">
+                <span>🇯🇵 In Japanese YouTube Video</span>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3IMS_tjPe9s?start=69" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: .8rem;">
+                <span>🇩🇪 In German LinkedIn Blog</span>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7036043547334057984" height="733" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            </div>
+        </section>
         <section id="disclaimer">
             <p>Please note that the ChatGPT Optimizer Chrome Extension is not developed by Open AI or the Chat GPT team.</p>
         </section>

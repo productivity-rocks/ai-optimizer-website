@@ -169,6 +169,11 @@ h2 {
     max-width: 800px;
 }
 
+#customerReviews {
+    overflow-y: scroll;
+    max-height: 800px;
+}
+
 #disclaimer {
     font-size: .8rem;
     padding: .6rem;
