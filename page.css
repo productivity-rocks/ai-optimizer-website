@@ -180,6 +180,9 @@ h2 {
     overflow-y: scroll;
     max-height: 800px;
 }
+#customerReviews iframe {
+    border-radius: 15px;
+}
 
 #disclaimer {
     font-size: .8rem;
@@ -193,6 +196,17 @@ h2 {
 @media screen and (max-width: 768px) {
     #start .right {
         display: none;
+    }
+    
+    #customerReviews {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+    #customerReviews iframe {
+        width: auto;
+        height: auto;
+        max-width: 100vw;
     }
 }
 

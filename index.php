@@ -234,15 +234,15 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
         </section>
         <section id="customerReviews" style="display: flex; flex-direction: row;">
             <div style="display: flex; flex-direction: column; gap: .8rem;">
-                <span>🇧🇷 In Portuguese YouTube Video</span>
+                <span>🇧🇷 Portuguese YouTube Review</span>
                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4xjtj_x5BeY?start=403" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div style="display: flex; flex-direction: column; gap: .8rem;">
-                <span>🇯🇵 In Japanese YouTube Video</span>
+                <span>🇯🇵 Japanese YouTube Review</span>
                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3IMS_tjPe9s?start=69" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div style="display: flex; flex-direction: column; gap: .8rem;">
-                <span>🇩🇪 In German LinkedIn Blog</span>
+                <span>🇩🇪 German LinkedIn Blog Mention</span>
                 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7036043547334057984" height="733" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
             </div>
         </section>
