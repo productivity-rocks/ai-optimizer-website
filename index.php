@@ -230,6 +230,12 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
                         <p>Yes, users can already customize the theme of the ChatGPT website. Additionally, the team is planning to add new features that will allow users to enable or disable different elements of the extension to personalize their experience. These features are expected to be available within the coming weeks.</p>
                     </div>
                 </details>
+                <details class="details">
+                    <summary>How does the ChatGPT Optimizer extension treat my privacy?</summary>
+                    <div class="detailsContent">
+                        <p>The ChatGPT Optimizer extension is committed to protecting your privacy. Currently, the extension does not collect or store any personal data on its servers, except for the number of users and which themes they use. In the future, anonymous statistics may be collected to analyze the most used features. If you choose to share your chat history, the data will be stored on the server, but the team will ensure that all data privacy and security protocols are in place. If you have any concerns about data privacy, please feel free to contact the team at ai@productivity.rocks.</p>
+                    </div>
+                </details>
             </section>
         </section>
         <section id="customerReviews" style="display: flex; flex-direction: row;">
