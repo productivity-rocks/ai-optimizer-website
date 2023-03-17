@@ -69,13 +69,13 @@
 
             <div class="contributors">
                 <div class="contributor">
-                    <img src="../../assets/img/contributors/jorit-vasconezgerlach.jpeg" alt="">
+                    <img src="https://productivity.rocks/tool/ai-optimizer/assets/img/contributors/jorit-vasconezgerlach.jpeg" alt="">
                     <h4>Jorit Vásconez Gerlach</h4>
                     <p>Founder & Creator</p>
                     <a href="https://github.com/jorit-vasconezgerlach"><p>@jorit-vasconezgerlach</p></a>
                 </div>
                 <div class="contributor">
-                    <img src="../../assets/img/contributors/tbscode.jpeg" alt="">
+                    <img src="https://productivity.rocks/tool/ai-optimizer/assets/img/contributors/tbscode.jpeg" alt="">
                     <h4>Tim Schupp</h4>
                     <p>Contributed on Page Prompting</p>
                     <a href="https://github.com/tbscode"><p>@tbscode</p></a>
