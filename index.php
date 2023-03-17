@@ -151,8 +151,8 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
         <section id="installation">
             <div class="videoWrap">
                 <video autoplay loop muted async>
-                    <source src="back.mov?php" type="video/quicktime">
-                    <source src="back.mp4?php" type="video/mp4">
+                    <source src="./back.mov" type="video/quicktime">
+                    <source src="./back.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
