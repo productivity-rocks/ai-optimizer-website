@@ -184,13 +184,17 @@ h2 {
     border-radius: 15px;
 }
 
-#disclaimer {
+footer {
     font-size: .8rem;
     padding: .6rem;
     display: grid;
     place-items: center;
     color: #565e67;
     background: #828c95;
+}
+footer a {
+    color: initial;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {

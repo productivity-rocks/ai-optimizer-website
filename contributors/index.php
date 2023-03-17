@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGPT Optimizer | Productivity Rocks</title>
-    <link rel="stylesheet" href="../../css/main.css?l=<?php echo uniqid() ?>">
+    <link rel="stylesheet" href="../css/main.css?l=<?php echo uniqid() ?>">
     <link rel="stylesheet" href="page.css?l=2">
-    <script src="../../assets/js/general.js"></script>
+    <script src="../assets/js/general.js"></script>
     <script src="page.js"> </script>
 </head>
 

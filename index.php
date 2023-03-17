@@ -253,9 +253,12 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
             </div>
         </section>
         <section id="disclaimer">
-            <p>Please note that the ChatGPT Optimizer Chrome Extension is not developed by Open AI or the Chat GPT team.</p>
-        </section>
-    </main>
+            </section>
+        </main>
+    <footer>
+        <a href="https://productivity.rocks/tool/ai-optimizer/contributors/">View Contributors</a>
+        <p>The extension is made with love 💙 By Productivity Rocks</p>
+    </footer>
 </body>
 
 </html>
