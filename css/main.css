@@ -62,9 +62,21 @@ button {
           -webkit-appearance: none;
 }
 button {
-          color: var(--greenLight);
-          background-color: var(--green);
-          cursor: pointer;
+    color: var(--greenLight);
+    background-color: var(--green);
+    cursor: pointer;
+}
+button.prominent {
+    color: var(--green);
+    background-color: var(--greenLight);
+    cursor: pointer;
+}
+button.outline {
+    -webkit-appearance: none;
+    border: 2px solid var(--greenLight);
+    color: var(--greenLight);
+    background: transparent;
+    cursor: pointer;
 }
 input,
 select,
@@ -226,4 +238,53 @@ header .notify {
 }
 header .notify[type="warn"] {
     background: #f39c12;
+}
+
+/* popup */
+/* >> Popup Message << */
+.gpt-optimizer.gpto-popupInner {
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 90px;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #434754;
+    border-radius: 10px;
+    background: #212933;
+}
+.gpt-optimizer.gpto-popupInner .gpto-popupHeader {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.2rem;
+    justify-content: space-between;
+    font-weight: 500;
+    padding: 8px 0px;
+    border-bottom: 1px solid rgb(67, 71, 84);
+    margin-bottom: 1rem;
+}
+.gpt-optimizer.gpto-popupInner .gpto-popupHeader.noName {
+    border-bottom: none;
+    justify-content: end;
+    margin-bottom: -1rem;
+}
+.gpt-optimizer.gpto-popupInner .gpto-popupHeader.noName span {
+    display: none;
+}
+.gpt-optimizer.gpto-popupInner .gpto-popupHeader svg {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+.gpt-optimizer.gpto-popupInner .gpto-popupHeader button {
+    height: 32px;
+    width: 32px;
+    padding: 0.4rem;
+}
+.gpt-optimizer.gpto-popupInner .gpto-popupContentWrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: auto 0;
 }
