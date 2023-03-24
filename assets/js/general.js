@@ -1,3 +1,11 @@
+window.addEventListener('scroll', (e)=>{
+    if(window.scrollY > 150) {
+        document.querySelector('header')?.classList.add('visible');
+    } else {
+        document.querySelector('header')?.classList.remove('visible');
+    }
+})
+
 function toast(msg, data = {}) {
     let typeColor = "var(--hGreen), var(--sGreen), var(--lGreen)";
     if (data.type && data.type === "warn") {

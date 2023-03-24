@@ -1,11 +1,3 @@
-window.addEventListener('scroll', (e)=>{
-  if(window.scrollY > 150) {
-    document.querySelector('header').classList.add('visible');
-  } else {
-    document.querySelector('header').classList.remove('visible');
-  }
-})
-
 if (/Mobi/.test(navigator.userAgent)) {
   // User is accessing from a mobile device
 } else {
